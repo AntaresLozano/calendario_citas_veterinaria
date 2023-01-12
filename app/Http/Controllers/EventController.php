@@ -29,7 +29,6 @@ class EventController extends Controller
             'color' => 'required | min:3',
         ]);
 
-
         $event = new Event;
 
         $event->title = $request->title;
@@ -43,14 +42,7 @@ class EventController extends Controller
         $event->descripcion = $request->descripcion;
         $event->color = $request->color;
 
-
-        // $events = Event::all();
-
-
         $event->save();
-
-
-        // return redirect()->route('todos')->with('success','Tarea creada correctamente');
     }
 
     public function deleteEvent($id)
@@ -73,6 +65,5 @@ class EventController extends Controller
         $event->descripcion = $request->descripcion;
         $event->color = $request->color;
         $event->save();
-        // return redirect('/');
     }
 }
